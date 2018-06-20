@@ -1,0 +1,7 @@
+.my-box {
+  padding: 10px; }
+  @media (min-width: 1200px) {
+    .my-box {
+      padding: 20px; } }
+
+/*# sourceMappingURL=mixins.css.map */

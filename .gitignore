@@ -1,0 +1,10 @@
+.project
+.settings
+coverage
+node_modules
+dist
+*.log
+.DS_Store
+.idea
+*.iml
+package-lock.json

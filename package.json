@@ -1,0 +1,34 @@
+{
+  "name": "raskolnikov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettify": "prettier --write 'src/**/*.{js,scss}'",
+    "dev": "poi",
+    "start": "poi build",
+    "poststart": "npm run php && npm run rmHTML && npm run htaccess && npm run imgs && npm run json",
+    "php": "cat src/index.php dist/index.html > dist/index.php",
+    "imgs": "mkdir dist/assets && cp -rf src/img/social dist/assets/social",
+    "json": "cp src/data/meta.json dist",
+    "rmHTML": "rm dist/index.html",
+    "htaccess": "cp src/.htaccess dist",
+    "now": "poi build src && now dist --public"
+  },
+  "author": "Oleg",
+  "license": "ISC",
+  "dependencies": {
+    "node-static": "^0.7.10",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-slick": "^0.16.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "poi": "^10.2.9",
+    "sass-loader": "^6.0.6"
+  }
+}

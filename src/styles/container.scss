@@ -1,0 +1,228 @@
+body {
+  font-family: nextart, sans-serif;
+  margin: 0;
+  background: url('../img/body-bg.jpg');
+  color: $grey_color2;
+
+  @include for-tablet-landscape-up {
+    margin-top: 15px;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: color $transition-time, border $transition-time;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  color: $grey_color2;
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 15px;
+}
+
+.container {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.header {
+  background: $header;
+  overflow: hidden;
+
+  @include for-tablet-portrait-up {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include for-tablet-landscape-up {
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+.title {
+  &__link {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px;
+
+    @include for-tablet-portrait-up {
+      padding: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      .title__text {
+        color: $title-text-hover;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 26px;
+    color: $title-text;
+    font-weight: normal;
+
+    @include for-tablet-landscape-up {
+      font-size: 30px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+
+  &__item {
+    color: $menu-item;
+    font-size: 12px;
+    padding: 14px 8px;
+    white-space: nowrap;
+    border-right: 1px solid $menu-border-right;
+
+    @include for-tablet-portrait-up {
+      padding: 24px 15px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white_color;
+      background: $brown_color;
+    }
+
+    &_active {
+      color: $menu-item;
+      background: $brown_color;
+    }
+  }
+}
+
+.footer {
+  background-color: $bg1;
+
+  &__inner {
+    background: $heading;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+
+    @include for-tablet-portrait-up {
+      //padding-right: 80px;
+      text-align: right;
+      margin-left: 30px;
+    }
+  }
+
+  &__address {
+    text-align: center;
+  }
+}
+
+
+.facebook-share {
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @include for-421-up {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    margin-bottom: 18px;
+
+    @include for-421-up {
+      width: auto;
+      margin-bottom: 0;
+      justify-content: space-between;
+    }
+
+    &:hover, &:active {
+      .social__text {
+        color: $hover-grey;
+      }
+      .facebook-icon path, .facebook-share-icon path, .google-maps-icon path {
+        fill: $hover-grey;
+      }
+
+      .mail-icon > g {
+        fill: $hover-grey;
+      }
+    }
+  }
+
+  &__text {
+    color: #5d5d5d;
+    transition: color $transition-time;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 10px;
+
+    @include for-tablet-portrait-up {
+      font-size: 14px;
+    }
+  }
+}
+
+.facebook-icon {
+  path {
+    transition: fill $transition-time;
+  }
+
+}
+
+.google-maps-icon {
+  path {
+    transition: fill $transition-time;
+  }
+}
+
+.mail-icon {
+  > g {
+    transition: fill $transition-time;
+  }
+}
+
+.facebook-share-icon {
+  path {
+    transition: fill $transition-time;
+  }
+}
+

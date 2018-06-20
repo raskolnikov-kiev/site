@@ -1,0 +1,102 @@
+{
+  "/": {
+    "title" : "Театр раскольников",
+    "description" : "«Театр раскольников» - это небольшой дружный коллектив в городе Киеве, состоящий из единомышленников, людей нацеленных на интеллектуальный вектор.",
+    "image" : "http://raskolnikov.kiev.ua/assets/social/index.jpg"
+  },
+  "/courses" : {
+    "title" : "Курсы | Театр раскольников",
+    "description" : "Курсы в Театре раскольников",
+    "image" : "http://raskolnikov.kiev.ua/assets/social/courses.jpg"
+  },
+  "/play/letters": {
+    "title": "Письма незнакомке | Театр раскольников",
+    "description": "Приглашаем вас на моноспектакль под гитару от Заслуженного артиста Украины Бориса Лободы! Вас ждут потрясающие «Письма незнакомке».",
+    "image": "http://raskolnikov.kiev.ua/assets/social/letters.jpg"
+  },
+  "/play/damn": {
+    "title": "Жуткий спектакль | Театр раскольников",
+    "description": "Самый странный спектакль театра, который погрузит вас в атмосферу жути.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/damn.jpg"
+  },
+  "/play/silver": {
+    "title": "Серебряный вечер | Театр раскольников",
+    "description": "Спектакль на грани святости и порока, как и сам Серебряный век. Декаданс и немного мистики ждут зрителей в «Театре раскольников».",
+    "image": "http://raskolnikov.kiev.ua/assets/social/silver.jpg"
+  },
+  "/play/garshin": {
+    "title": "Мне тебя уже не надо?.. | Театр раскольников",
+    "description": "Спектакль о том, как девочки любят мальчиков и эта любовь не меняется даже через сотни лет.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/garshin.jpg"
+  },
+  "/play/dreams": {
+    "title": "Сны Эйнштейна | Театр раскольников",
+    "description": "Существуют тысячи миров, и в каждом свое время! И в каждом — оно великое... В каком мире живете вы? «Театр раскольников» приглашает в путешествие со временем.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/dreams.jpg"
+  },
+  "/play/nextMan": {
+    "title": "Первый встречный | Театр раскольников",
+    "description": "«Первый встречный» - история, в которой сплелись воедино человеческие страхи, слабости и страсти.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/nextMan.jpg"
+  },
+  "/play/zoschenko": {
+    "title": "Зощенко | Театр раскольников",
+    "description": "Зощенко - первая комедия Театра раскольников. Жанр, к которому всегда трудно подступиться. Спектакль, рожденный в муках, как собственно из боли и сожалений рождались рассказы Михаила Зощенко. Безобидные и безобразные образы, гуляющие в голове Зощенко, скрывают в себе символы современных пороков.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/zoschenko.jpg"
+  },
+  "/play/poetry": {
+    "title": "Вечір української поезії \"Розмова про любов\" | Театр раскольников",
+    "description": "Запрошуємо на розмову про любов до \"Театру раскольніков\"! Вечір української поезії, у якому візьмуть участь не тільки актори театру, але й усі бажаючі глядачі.",
+    "image": "http://raskolnikov.kiev.ua/assets/social/poetry.jpg"
+  },
+  "/face/EkaterinaDuplihina": {
+    "title": "Екатерина Дуплихина | Театр раскольников",
+    "description": "Актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/katya.jpg"
+  },
+  "/face/TatyanaKazydub": {
+    "title": "Татьяна Казыдуб | Театр раскольников",
+    "description": "Актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/tanya.jpg"
+  },
+  "/face/Polina﻿Mandibura": {
+    "title": "Полина ﻿Мандыбура | Театр раскольников",
+    "description": "Актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/polina.jpg"
+  },
+  "/face/OlegBabich": {
+    "title": "Олег Бабич | Театр раскольников",
+    "description": "Актер театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/olegb.jpg"
+  },
+  "/face/AlesyaSavchenko": {
+    "title": "Алеся Савченко | Театр раскольников",
+    "description": "Режиссёр и актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/alesya.jpg"
+  },
+  "/face/AlenaPetliarskyaia": {
+    "title": "Алёна Петлярская | Театр раскольников",
+    "description": "Актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/alyona.jpg"
+  },
+  "/face/BorisLoboda": {
+    "title": "Борис Лобода | Театр раскольников",
+    "description": "Актёр театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/boris.jpg"
+  },
+  "/face/MarinaPucherova": {
+    "title": "Марина Пучерова | Театр раскольников",
+    "description": "Актриса театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/marina.jpg"
+  },
+  "/face/OlegMakievsky": {
+    "title": "Олег Макиевский | Театр раскольников",
+    "description": "Директор театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/olegm.jpg"
+  },
+  "/face/VeraIvaschenko": {
+    "title": "Вера Иващенко | Театр раскольников",
+    "description": "Костюмер театра",
+    "image": "http://raskolnikov.kiev.ua/assets/social/vera.jpg"
+  }
+}
