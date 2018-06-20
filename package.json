@@ -8,13 +8,13 @@
     "prettify": "prettier --write 'src/**/*.{js,scss}'",
     "dev": "poi",
     "start": "poi build",
-    "poststart": "npm run php && npm run rmHTML && npm run htaccess && npm run imgs && npm run json",
+    "poststart": "npm run php && npm run rmHTML && npm run htaccess && npm run imgs && npm run json && npm run zip",
     "php": "cat src/index.php dist/index.html > dist/index.php",
     "imgs": "mkdir dist/assets && cp -rf src/img/social dist/assets/social",
     "json": "cp src/data/meta.json dist",
     "rmHTML": "rm dist/index.html",
     "htaccess": "cp src/.htaccess dist",
-    "now": "poi build src && now dist --public"
+    "zip": "mkdir -p backup/1 && zip -r backup/1/dist.zip dist && cd backup && date +%Y-%m-%d-%H-%M-%S | xargs -L 1 mv 1"
   },
   "author": "Oleg",
   "license": "ISC",
