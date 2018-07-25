@@ -304,7 +304,7 @@ export const PLAYS_INFO = {
         description: 'Amestoy Trio, The Swingle Singers, Orquesta de Salvador Rangel, Gert Wilden, Archerontic Dawn, Wayne Hill'
       },
     ],
-    dates: [{ string: '19 мая, 18:00', date: new Date('2018-05-19 18:00') }]
+    dates: [{ string: '5 августа, 17:00', date: new Date('2018-08-05 17:00') }]
   },
   [POETRY]: {
     title: 'Вечір української поезії "Розмова про любов"',
