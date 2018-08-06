@@ -9,6 +9,13 @@ const Header = () => (
 
     <nav className="menu">
       <NavLink
+        to="/studio"
+        className="menu__item"
+        activeClassName="menu__item_active"
+      >
+        Студия
+      </NavLink>
+      <NavLink
         to="/courses"
         className="menu__item"
         activeClassName="menu__item_active"

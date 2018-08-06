@@ -5,6 +5,7 @@ import Header from '../Header';
 import ScrollToTop from '../ScrollToTop';
 import NoMatch from '../NoMatch';
 import Courses from '../Courses';
+import Studio from '../Studio';
 
 import Play from '../Play';
 import MetaTags from '../MetaTags';
@@ -27,6 +28,7 @@ const App = () => (
         <Route path={PLAY_ROUTE} component={Play} />
         <Route path={FACE_ROUTE} component={Face} />
         <Route path="/courses" component={Courses} />
+        <Route path="/studio" component={Studio} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />
