@@ -6,8 +6,13 @@
   },
   "/courses" : {
     "title" : "Курсы | Театр раскольников",
-    "description" : "Курсы в Театре раскольников",
+    "description" : "Курсы в «Театре раскольников»",
     "image" : "http://raskolnikov.kiev.ua/assets/social/courses.jpg"
+  },
+  "/studio" : {
+    "title" : "Cтудия | Театр раскольников",
+    "description" : "Актёрская студия для взрослых при «Театре раскольников»",
+    "image" : "http://raskolnikov.kiev.ua/assets/social/studio.jpg"
   },
   "/play/letters": {
     "title": "Письма незнакомке | Театр раскольников",

@@ -63,7 +63,7 @@ const Faces = () => (
         <Link to={getLinkByUserId(MARINA)} className="photo">
           <div className="photo__img photo__img-marina" />
           <p className="photo__actor-name">
-            {getNameByUserId(MARINA)} <br />актриса
+            {getNameByUserId(MARINA)} <br />режиссер, актриса
           </p>
         </Link>
       </li>

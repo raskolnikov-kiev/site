@@ -1,4 +1,18 @@
 import React, { Component } from 'react';
+import {
+  getLinkByUserId,
+  getNameByUserId,
+  KATYA,
+  OLEGM,
+  ALESYA,
+  ALYONA,
+  OLEGB,
+  VERA,
+  BORIS,
+  MARINA,
+  TANYA,
+  POLINA
+} from '@/data/faces';
 
 import classnames from 'classnames';
 
@@ -6,11 +20,10 @@ import { arrowWhite } from '@/img/arrow-down-white.svg';
 import { arrow } from '@/img/arrow-down.svg';
 
 import Gallery from '../Gallery';
-import { ALESYA, getLinkByUserId } from '@/data/faces';
-import { CHEKHOV_DATE, SPEECH_DATE, POEMS_DATE } from '@/data/constants';
-import { COURSES_PHOTOS } from '@/data/courses';
 
-const images = COURSES_PHOTOS;
+import { CHEKHOV_DATE, SPEECH_DATE, POEMS_DATE } from '@/data/constants';
+import { STUDIO_PHOTOS } from '@/data/studio';
+import { Link } from 'react-router-dom';
 
 const TOGGLES = {
   WHAT: 'WHAT',
@@ -18,108 +31,258 @@ const TOGGLES = {
   WHO: 'WHO',
   RESULTS: 'RESULTS',
   WHOM: 'WHOM',
-  DETAILES: 'DETAILES',
+  DETAILS: 'DETAILS'
 };
 
 class Studio extends Component {
-
   state = {};
 
   onMoreClick(blockName) {
     this.setState(prevState => ({
       [blockName]: !prevState[blockName]
-    }))
+    }));
   }
 
   render() {
     return (
       <div>
-        <Gallery images={images} />
+        <Gallery images={STUDIO_PHOTOS} />
         <div className="welcome welcome-play">
           <h1 className="welcome__title">Студия</h1>
           <div className="welcome__text course__description">
-            "Театр раскольников" начинает эксперимент и открывает двери🚪 для всех желающих учиться!
-            Театральный дом "раскольников" с магической атмосферой приглашает в студию. <strong>1 сентября 2018 года стартует взрослая группа</strong>.
+            "Театр раскольников" начинает эксперимент и открывает двери для всех
+            желающих учиться! Театральный дом "раскольников" с магической
+            атмосферой приглашает в студию.{' '}
+            <strong><strong className="nowrap">1 сентября 2018 года</strong> стартует взрослая группа</strong>.
           </div>
           <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.WHAT] })} onClick={() => this.onMoreClick(TOGGLES.WHAT)}>Чем мы будем заниматься?</a>
-            {this.state[TOGGLES.WHAT] && <div className="studio__block">Мы будем старательно работать на сцене ради того, чтобы в конце учебного года <span>поставить спектакль</span>👏! Лучшие студийцы присоединяться к труппе театра🔥.</div>}
+            <MailButton />
           </div>
-
           <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.SUBJECTS] })} onClick={() => this.onMoreClick(TOGGLES.SUBJECTS)}>Что быдем изучать?</a>
-            {this.state[TOGGLES.SUBJECTS] && <ul className="studio__list studio__list_emoji studio__block">
-              <li>🎭  <b>актерское мастерство</b> (несколько техник, в том числе активное использование метода Михаила Чехова)</li>
-              <li>🚶  <b>пластическое движение </b></li>
-              <li>😸  <b>культура речи </b> (это не просто сценическая речь, это всеобъемлющая способность говорить правильно и
-                красиво)
-              </li>
-              <li>🎹  <b>вокал</b> (все актеры "Театра раскольников" поют, и поскольку у каждого есть шанс стать частью труппы -
-                все учимся петь, тем более режиссеры любят использовать вокальные номера в спектаклях)
-              </li>
-            </ul>
-            }
-          </div>
-
-          <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.WHO] })} onClick={() => this.onMoreClick(TOGGLES.WHO)}>Кто у нас преподает?</a>
-            {this.state[TOGGLES.WHO] && <ul className="studio__list studio__block">
-              <li>Алеся Савченко - член Ассоциации Михаила Чехова (MICHA), режиссер и актриса, дипломированный
-                преподаватель метода Михаила Чехова и преподаватель сценической речи. Художественный руководитель
-                "Театра раскольников" (сама Алеся просит называть её идейным вдохновителем:)
-              </li>
-              <li>Марина Пучерова - член Союза Театральных деятелей Украины, преподаватель актерского мастерства и
-                пластического движения. С августа 2018 года - главный режиссер "Театра раскольников".
-              </li>
-              <li>Татьяна Казыдуб - магистр театрального искусства, артистка и диктор Оперной студии при НМАУ им. П.И.
-                Чайковского, режиссер и актриса "Театра раскольников". Преподаватель по вокалу.
-              </li>
-              <li>Катерина Дуплихина - актриса "Театра раскольников", руководитель межрепетиционных тренажей для
-                актеров.
-              </li>
-            </ul>
-            }
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.WHAT]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.WHAT)}
+            >
+              Чем мы будем заниматься?
+            </a>
+            {this.state[TOGGLES.WHAT] && (
+              <div className="studio__block">
+                Мы будем старательно работать на сцене ради того, чтобы в конце
+                учебного года <span>поставить спектакль</span>👏! Лучшие
+                студийцы присоединятся к труппе театра🔥.
+              </div>
+            )}
           </div>
 
           <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.RESULTS] })} onClick={() => this.onMoreClick(TOGGLES.RESULTS)}>Что мы хотим получить в результате?</a>
-            {this.state[TOGGLES.RESULTS] && <ul className="studio__list studio__block">
-              <li>отсутствие зажимов 💪</li>
-              <li>легкость тела</li>
-              <li>органику на сцене</li>
-              <li>хорошую дикцию</li>
-              <li>актерскую свободу</li>
-              <li>актеров в труппу (шкурный интерес театра 😃)</li>
-            </ul>
-            }
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.SUBJECTS]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.SUBJECTS)}
+            >
+              Что быдем изучать?
+            </a>
+            {this.state[TOGGLES.SUBJECTS] && (
+              <ul className="studio__list studio__list_emoji studio__block">
+                <li>
+                  🎭 <b>актерское мастерство</b> (несколько техник, в том числе
+                  активное использование метода <span>Михаила Чехова</span>)
+                </li>
+                <li>
+                  🚶 <b>пластическое движение </b>
+                </li>
+                <li>
+                  😸 <b>культура речи </b> (это не просто сценическая речь, это
+                  всеобъемлющая способность{' '}
+                  <span>говорить правильно и красиво</span>)
+                </li>
+                <li>
+                  🎹 <b>вокал</b> (все актеры "Театра раскольников" поют, и
+                  поскольку у каждого есть шанс стать частью труппы - все учимся
+                  петь, тем более режиссеры любят использовать{' '}
+                  <span>вокальные номера в спектаклях</span>)
+                </li>
+              </ul>
+            )}
+          </div>
+
+          <div className="course__description welcome__text">
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.WHO]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.WHO)}
+            >
+              Кто у нас преподает?
+            </a>
+            {this.state[TOGGLES.WHO] && (
+              <ul className="studio__list studio__block studio__persons">
+                <li className="studio__person">
+                  <Link
+                    to={getLinkByUserId(ALESYA)}
+                    className="photo studio__person_link"
+                  >
+                    <div className="photo studio__person_photo_wrapper">
+                      <div className="studio__person_photo photo__img photo__img-alesya" />
+                    </div>
+                    <div className="studio__person_descr">
+                      <Link to={getLinkByUserId(ALESYA)} className="play__link">
+                        <b>Алеся Савченко</b>
+                      </Link>{' '}
+                      - член Ассоциации Михаила Чехова (MICHA), режиссер и
+                      актриса, дипломированный преподаватель метода{' '}
+                      <span>Михаила Чехова</span> и преподаватель сценической
+                      речи. Художественный руководитель "Театра раскольников"
+                      (сама Алеся просит называть её идейным вдохновителем:)
+                    </div>
+                  </Link>
+                </li>
+                <li className="studio__person">
+                  <Link
+                    to={getLinkByUserId(MARINA)}
+                    className="photo studio__person_link"
+                  >
+                    <div className="photo studio__person_photo_wrapper">
+                      <div className="studio__person_photo photo__img photo__img-marina" />
+                    </div>
+                    <div className="studio__person_descr">
+                      <Link to={getLinkByUserId(MARINA)} className="play__link">
+                        <b>Марина Пучерова</b>
+                      </Link>{' '}
+                      - член Союза Театральных деятелей Украины, преподаватель
+                      актерского мастерства и пластического движения. С августа
+                      2018 года - <span>главный режиссер</span> "Театра
+                      раскольников".
+                    </div>
+                  </Link>
+                </li>
+                <li className="studio__person">
+                  <Link
+                    to={getLinkByUserId(TANYA)}
+                    className="photo studio__person_link"
+                  >
+                    <div className="photo studio__person_photo_wrapper">
+                      <div className="studio__person_photo photo__img photo__img-tanya" />
+                    </div>
+                    <div className="studio__person_descr">
+                      <Link to={getLinkByUserId(TANYA)} className="play__link">
+                        <b>Татьяна Казыдуб</b>
+                      </Link>{' '}
+                      - магистр театрального искусства,{' '}
+                      <span>
+                        артистка и диктор Оперной студии при НМАУ им. П.И.
+                        Чайковского
+                      </span>, режиссер и актриса "Театра раскольников".
+                      Преподаватель по вокалу.
+                    </div>
+                  </Link>
+                </li>
+                <li className="studio__person">
+                  <Link
+                    to={getLinkByUserId(KATYA)}
+                    className="photo studio__person_link"
+                  >
+                    <div className="photo studio__person_photo_wrapper">
+                      <div className="studio__person_photo photo__img photo__img-katya" />
+                    </div>
+                    <div className="studio__person_descr">
+                      <Link to={getLinkByUserId(KATYA)} className="play__link">
+                        <b>Катерина Дуплихина</b>
+                      </Link>{' '}
+                      - <span>актриса "Театра раскольников"</span>, руководитель
+                      межрепетиционных тренажей для актеров.
+                    </div>
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </div>
+
+          <div className="course__description welcome__text">
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.RESULTS]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.RESULTS)}
+            >
+              К чему мы стремимся?
+            </a>
+            {this.state[TOGGLES.RESULTS] && (
+              <ul className="studio__list studio__block studio__list_emoji">
+                <li>💪 отсутствие зажимов</li>
+                <li>🎈 легкость тела</li>
+                <li>😉 органику на сцене</li>
+                <li>🎓 хорошую дикцию</li>
+                <li>⚡ актерскую свободу</li>
+                <li>⭐ актеров в труппу (шкурный интерес театра)</li>
+              </ul>
+            )}
           </div>
           <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.WHOM] })} onClick={() => this.onMoreClick(TOGGLES.WHOM)}>Для кого мы открываем студию?</a>
-            {this.state[TOGGLES.WHOM] && <ul className="studio__list studio__list_emoji studio__block ">
-              <li>🎩  для всех, кто мечтает о сцене</li>
-              <li>🎩  для тех, кто хочет попробовать что-то новое в жизни</li>
-              <li>🎩  для людей, нуждающихся в раскрепощении</li>
-              <li>🎩  для всех, кто хочет жить театром</li>
-            </ul>
-            }
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.WHOM]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.WHOM)}
+            >
+              Для кого мы открываем студию?
+            </a>
+            {this.state[TOGGLES.WHOM] && (
+              <ul className="studio__list studio__list_emoji studio__block ">
+                <li>🎩 для всех, кто мечтает о сцене</li>
+                <li>🎩 для тех, кто хочет попробовать что-то новое в жизни</li>
+                <li>🎩 для людей, нуждающихся в раскрепощении</li>
+                <li>🎩 для всех, кто хочет жить театром</li>
+              </ul>
+            )}
           </div>
           <div className="course__description welcome__text">
-            <a className={classnames('studio__header', { studio__header_shown: this.state[TOGGLES.DETAILES] })} onClick={() => this.onMoreClick(TOGGLES.DETAILES)}>Важные детали</a>
-            {this.state[TOGGLES.DETAILES] && <div className="studio__block">
-              График занятий будет расписан позже, в зависимости от количества учеников в группе. Возраст студентов взрослой студии - от 18 лет (о наборе в детскую студию будет объявлено позже).
-              Стоимость - 1500 грн в месяц.
-              3 занятия в неделю.
-              Бонусы - невероятная магическая энергетика "Театра раскольников", участие в фестивалях и главный приз - театральная сцена, ради которой стоит совершать подвиги!
-            </div>}
-          </div>
-          <div className="course__description welcome__text">
-            За более подробной информацией - обращайтесь в личные сообщения к Alesya Savchenko или марина пучерова (Marina Pytcherova)
-            Пишите на почту: <a href="mailto:raskolnikov.kiev@gmail.com">raskolnikov.kiev@gmail.com</a>
+            <a
+              className={classnames('studio__header', {
+                studio__header_shown: this.state[TOGGLES.DETAILS]
+              })}
+              onClick={() => this.onMoreClick(TOGGLES.DETAILS)}
+            >
+              Важные детали
+            </a>
+            {this.state[TOGGLES.DETAILS] && (
+              <div className="studio__block">
+                График занятий будет расписан позже, в зависимости от количества
+                учеников в группе. Возраст студентов взрослой студии -{' '}
+                <strong>от 18 лет</strong> (о наборе в детскую студию будет
+                объявлено позже).
+                <br />
+                <strong>Стоимость - 1500 грн в месяц.</strong> 3 занятия в
+                неделю. Бонусы - невероятная магическая энергетика "Театра
+                раскольников", участие в фестивалях и главный приз - театральная
+                сцена, ради которой стоит совершать подвиги!
+                <br />
+                <br />
+                <MailButton />
+              </div>
+            )}
           </div>
         </div>
       </div>
     );
   }
 }
+
+const MailButton = () => (
+  <div>
+    <button className="studio__button">
+      <a
+        target="_blank"
+        className="studio__button_link"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfbWiyqvQ8unR_wufTxw6p8PA4yy6pQ6QEt4Mvp8PGeT0-sXA/viewform?usp=sf_link"
+      >
+        Записаться или задать вопрос
+      </a>
+    </button>
+  </div>
+);
 
 export default Studio;
