@@ -109,7 +109,8 @@
     color: $brown_color;
     text-decoration: underline;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $white_color;
     }
   }
@@ -167,7 +168,6 @@
     & svg {
       fill: $white_color;
     }
-
   }
 }
 
@@ -265,10 +265,10 @@
     margin: 0;
     width: 100%;
     display: block;
-    height: calc(100vw*2/3);
+    height: calc(100vw * 2 / 3);
 
     @media all and (min-width: 770px) {
-      height: calc(770px*2/3);
+      height: calc(770px * 2 / 3);
     }
 
     &_home {

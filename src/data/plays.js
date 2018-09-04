@@ -196,7 +196,8 @@ export const PLAYS_INFO = {
         title: 'Муызка',
         description: 'И.С.Бах, Й.Гайдн, Б.Марчелло, Ф.Шопен, Secret Garden'
       }
-    ]
+    ],
+    dates: [{ string: '2 сентября, 17:00', date: new Date('2018-09-02 17:00') }]
   },
   [DREAMS]: {
     title: 'Сны Эйнштейна',
@@ -236,7 +237,7 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [{ string: '23 июня, 18:00', date: new Date('2018-06-23 18:00') }]
+    dates: [{ string: '19 августа, 17:00', date: new Date('2018-08-19 17:00') }]
   },
   [LETTERS]: {
     title: 'Письма незнакомке',
@@ -301,10 +302,11 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Музыка',
-        description: 'Amestoy Trio, The Swingle Singers, Orquesta de Salvador Rangel, Gert Wilden, Archerontic Dawn, Wayne Hill'
-      },
+        description:
+          'Amestoy Trio, The Swingle Singers, Orquesta de Salvador Rangel, Gert Wilden, Archerontic Dawn, Wayne Hill'
+      }
     ],
-    dates: [{ string: '5 августа, 17:00', date: new Date('2018-08-05 17:00') }]
+    dates: [{ string: '15 сентября, 17:00', date: new Date('2018-09-15 17:00') }]
   },
   [POETRY]: {
     title: 'Вечір української поезії "Розмова про любов"',
@@ -312,10 +314,19 @@ export const PLAYS_INFO = {
     component: Poetry,
     dates: [{ string: '23 июня, 18:00', date: new Date('2018-05-23 18:00') }],
     faces: []
-  },
+  }
 };
 
-const ACTIVE_PLAYS = [DAMN, SILVER, GARSHIN, LETTERS, DREAMS, NEXT_MAN, ZOSCHENKO, POETRY];
+const ACTIVE_PLAYS = [
+  DAMN,
+  SILVER,
+  GARSHIN,
+  LETTERS,
+  DREAMS,
+  NEXT_MAN,
+  ZOSCHENKO,
+  POETRY
+];
 
 const SOON_PLAYS = [];
 
@@ -331,9 +342,9 @@ export const getSoonPlays = () => {
     link: getLinkByPlayId(playId)
   }));
 
-  plays.push({
-    title: 'Аут'
-  });
+  // plays.push({
+  //   title: 'Аут'
+  // });
 
   return plays;
 };
@@ -375,7 +386,8 @@ const isExpired = date => +date + oneHour - new Date() < 0;
 export const getPlayNameByPlayId = playId => PLAYS_INFO[playId].title;
 
 export const getFacesByPlayId = playId =>
-  PLAYS_INFO[playId].faces && PLAYS_INFO[playId].faces.map(({ title, userId, description }) => ({
+  PLAYS_INFO[playId].faces &&
+  PLAYS_INFO[playId].faces.map(({ title, userId, description }) => ({
     title,
     description: description || getNameByUserId(userId),
     link: userId ? getLinkByUserId(userId) : undefined

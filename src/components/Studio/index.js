@@ -53,7 +53,10 @@ class Studio extends Component {
             "Театр раскольников" начинает эксперимент и открывает двери для всех
             желающих учиться! Театральный дом "раскольников" с магической
             атмосферой приглашает в студию.{' '}
-            <strong><strong className="nowrap">1 сентября 2018 года</strong> стартует взрослая группа</strong>.
+            <strong>
+              <strong className="nowrap">1 сентября 2018 года</strong> стартует
+              взрослая группа
+            </strong>.
           </div>
           <div className="course__description welcome__text">
             <MailButton />
@@ -271,7 +274,7 @@ class Studio extends Component {
   }
 }
 
-const MailButton = () => (
+export const MailButton = () => (
   <div>
     <button className="studio__button">
       <a

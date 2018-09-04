@@ -21,7 +21,7 @@ const Play = ({ match }) => {
       <Gallery images={images} />
       <Component />
       <Plays plays={dates} title="Ближайшие спектакли" />
-      {faces && (<Plays plays={faces} title="Над спектаклем работали" />) }
+      {faces && <Plays plays={faces} title="Над спектаклем работали" />}
     </div>
   );
 };

@@ -7,7 +7,7 @@ import {
   LETTERS,
   ZOSCHENKO,
   POETRY,
-  getPlayNameByPlayId,
+  getPlayNameByPlayId
 } from './plays';
 
 import damn1 from '@/img/photos/damn/1.jpg';
@@ -112,9 +112,7 @@ export const PLAYS_PHOTOS = {
     { src: zoschenko5, alt: getPlayNameByPlayId(ZOSCHENKO) },
     { src: zoschenko6, alt: getPlayNameByPlayId(ZOSCHENKO) }
   ],
-  [POETRY]: [
-    { src: poetry1, alt: getPlayNameByPlayId(POETRY) }
-  ]
+  [POETRY]: [{ src: poetry1, alt: getPlayNameByPlayId(POETRY) }]
 };
 
 export const getImagesByPlayId = playId => PLAYS_PHOTOS[playId];

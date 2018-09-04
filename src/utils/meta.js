@@ -7,9 +7,7 @@ export const changeMetaTags = () => {
     ? meta[pathname]
     : meta['/'];
 
-  document
-    .querySelector('title')
-    .innerText = title;
+  document.querySelector('title').innerText = title;
 
   document
     .querySelector('meta[property="og:title"]')
@@ -31,4 +29,3 @@ export const changeMetaTags = () => {
     .querySelector('meta[property="og:image"]')
     .setAttribute('content', image);
 };
-
