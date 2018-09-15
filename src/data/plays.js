@@ -20,7 +20,8 @@ import {
   Dreams,
   NextMan,
   Zoschenko,
-  Poetry
+  Poetry,
+  Car
 } from '@/components/PlayDescriptions';
 
 export const DAMN = 'damn';
@@ -31,6 +32,7 @@ export const DREAMS = 'dreams';
 export const LETTERS = 'letters';
 export const ZOSCHENKO = 'zoschenko';
 export const POETRY = 'poetry';
+export const CAR = 'car';
 
 const oneHour = 1000 * 60 * 60;
 
@@ -61,7 +63,7 @@ export const PLAYS_INFO = {
       {
         title: 'Драматургия',
         description:
-          'И.Тургенев, М. Лермонтов, А.Куприн, А. Погорельский, А.Савченко'
+          'И. Тургенев, М. Лермонтов, А. Куприн, А. Погорельский, А. Савченко'
       },
       {
         title: 'Музыка',
@@ -77,7 +79,62 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [{ string: '3 февраля, 17:00', date: new Date('2018-02-03 17:00') }]
+    dates: [{ string: '30 сентября, 17:00', date: new Date('2018-09-30 17:00') }]
+  },
+  [CAR]: {
+    title: 'Не садись в машину, где двое',
+    link: getLinkByPlayId(CAR),
+    component: Car,
+    faces: [
+      {
+        title: 'Режиссер, инсценировщик',
+        userId: OLEGB
+      },
+      {
+        title: 'Клава',
+        userId: ALESYA
+      },
+      {
+        title: 'Охранница',
+        userId: MARINA
+      },
+      {
+        title: 'Уборщица',
+        userId: KATYA
+      },
+      {
+        title: 'Подружка',
+        userId: TANYA
+      },
+      {
+        title: 'Мужик',
+        userId: OLEGB
+      },
+      {
+        title: 'Автор',
+        description:
+          'Л. Петрушевская'
+      },
+      {
+        title: 'Музыка',
+        description:
+          'Mr. Big, Omar Rodríguez-López, Marc Ribot, Brian Eno, Chocolate Genius, Red Snapper, Серебряная свадьба, Л. Федоров'
+      },
+      {
+        title: 'Песни',
+        description:
+          'С. Канада, А. Серов, Л. Успенская, В. Цыганова, Лесоповал, Фристайл'
+      },
+      {
+        title: 'Костюмы',
+        userId: ALESYA
+      },
+      {
+        title: 'Спектакль ведет',
+        userId: OLEGM
+      }
+    ],
+    dates: [{ string: '23 сентября, 17:00', date: new Date('2018-09-23 17:00') }]
   },
   [SILVER]: {
     title: 'Серебряный вечер',
@@ -114,7 +171,7 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Музыка',
-        description: 'О.Погудин, А.Вивальди'
+        description: 'О. Погудин, А. Вивальди'
       }
     ],
     dates: [{ string: '10 февраля, 17:00', date: new Date('2018-02-10 17:00') }]
@@ -178,7 +235,7 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Драматургия',
-        description: 'А.Куприн, А.Савченко'
+        description: 'А. Куприн, А. Савченко'
       },
       {
         title: 'Дизайн макетов и афиши',
@@ -194,7 +251,7 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Муызка',
-        description: 'И.С.Бах, Й.Гайдн, Б.Марчелло, Ф.Шопен, Secret Garden'
+        description: 'И. С. Бах, Й. Гайдн, Б. Марчелло, Ф. Шопен, Secret Garden'
       }
     ],
     dates: [{ string: '2 сентября, 17:00', date: new Date('2018-09-02 17:00') }]
@@ -226,7 +283,7 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Драматургия',
-        description: 'А.Лайтман, А.Савченко'
+        description: 'А. Лайтман, А. Савченко'
       },
       {
         title: 'Музыка',

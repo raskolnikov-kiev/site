@@ -7,8 +7,15 @@ import {
   LETTERS,
   ZOSCHENKO,
   POETRY,
+  CAR,
   getPlayNameByPlayId
 } from './plays';
+
+import car1 from '@/img/photos/car/1.jpg';
+import car2 from '@/img/photos/car/2.jpg';
+import car3 from '@/img/photos/car/3.jpg';
+import car4 from '@/img/photos/car/4.jpg';
+import car5 from '@/img/photos/car/5.jpg';
 
 import damn1 from '@/img/photos/damn/1.jpg';
 import damn2 from '@/img/photos/damn/2.jpg';
@@ -59,6 +66,13 @@ import zoschenko6 from '@/img/photos/zoschenko/6.jpg';
 import poetry1 from '@/img/photos/poetry/1.jpg';
 
 export const PLAYS_PHOTOS = {
+  [CAR]: [
+    // { src: car1, alt: getPlayNameByPlayId(CAR) },
+    // { src: car2, alt: getPlayNameByPlayId(CAR) },
+    { src: car3, alt: getPlayNameByPlayId(CAR) },
+    { src: car4, alt: getPlayNameByPlayId(CAR) },
+    { src: car5, alt: getPlayNameByPlayId(CAR) }
+  ],
   [DAMN]: [
     { src: damn1, alt: getPlayNameByPlayId(DAMN) },
     { src: damn2, alt: getPlayNameByPlayId(DAMN) },
