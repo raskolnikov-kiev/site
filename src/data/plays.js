@@ -87,7 +87,7 @@ export const PLAYS_INFO = {
     component: Car,
     faces: [
       {
-        title: 'Режиссер, инсценировщик',
+        title: 'Режиссер',
         userId: OLEGB
       },
       {
