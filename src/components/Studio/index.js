@@ -54,9 +54,8 @@ class Studio extends Component {
             желающих учиться! Театральный дом "раскольников" с магической
             атмосферой приглашает в студию.{' '}
             <strong>
-              <strong className="nowrap">1 сентября 2018 года</strong> стартует
-              взрослая группа
-            </strong>.
+              Присоединяйтесь к труппе в октябре 2018!
+            </strong>
           </div>
           <div className="course__description welcome__text">
             <MailButton />

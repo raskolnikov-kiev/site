@@ -134,7 +134,10 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [{ string: '23 сентября, 17:00', date: new Date('2018-09-23 17:00') }]
+    dates: [
+      { string: '23 сентября, 17:00', date: new Date('2018-09-23 17:00') },
+      { string: '29 сентября, 17:00', date: new Date('2018-09-29 17:00') }
+      ]
   },
   [SILVER]: {
     title: 'Серебряный вечер',
@@ -375,13 +378,14 @@ export const PLAYS_INFO = {
 };
 
 const ACTIVE_PLAYS = [
+  CAR,
   DAMN,
-  SILVER,
-  GARSHIN,
-  LETTERS,
-  DREAMS,
-  NEXT_MAN,
   ZOSCHENKO,
+  GARSHIN,
+  DREAMS,
+  SILVER,
+  LETTERS,
+  NEXT_MAN,
   POETRY
 ];
 
