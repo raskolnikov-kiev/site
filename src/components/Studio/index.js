@@ -13,6 +13,7 @@ import {
   TANYA,
   POLINA
 } from '@/data/faces';
+import { FORMS, CHEKHOV } from '../../data/googleForms';
 
 import classnames from 'classnames';
 
@@ -53,12 +54,10 @@ class Studio extends Component {
             "Театр раскольников" начинает эксперимент и открывает двери для всех
             желающих учиться! Театральный дом "раскольников" с магической
             атмосферой приглашает в студию.{' '}
-            <strong>
-              Присоединяйтесь к труппе в октябре 2018!
-            </strong>
+            <strong>Присоединяйтесь к труппе в октябре 2018!</strong>
           </div>
           <div className="course__description welcome__text">
-            <MailButton />
+            <GoogleFormButton type={CHEKHOV}/>
           </div>
           <div className="course__description welcome__text">
             <a
@@ -263,7 +262,7 @@ class Studio extends Component {
                 сцена, ради которой стоит совершать подвиги!
                 <br />
                 <br />
-                <MailButton />
+                <GoogleFormButton type={CHEKHOV}/>
               </div>
             )}
           </div>
@@ -273,13 +272,13 @@ class Studio extends Component {
   }
 }
 
-export const MailButton = () => (
+export const GoogleFormButton = ({ type }) => (
   <div>
     <button className="studio__button">
       <a
         target="_blank"
         className="studio__button_link"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfbWiyqvQ8unR_wufTxw6p8PA4yy6pQ6QEt4Mvp8PGeT0-sXA/viewform?usp=sf_link"
+        href={FORMS[type]}
       >
         Записаться или задать вопрос
       </a>
