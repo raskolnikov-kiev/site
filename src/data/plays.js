@@ -21,7 +21,8 @@ import {
   NextMan,
   Zoschenko,
   Poetry,
-  Car
+  Car,
+  Old
 } from '@/components/PlayDescriptions';
 
 export const DAMN = 'damn';
@@ -33,6 +34,8 @@ export const LETTERS = 'letters';
 export const ZOSCHENKO = 'zoschenko';
 export const POETRY = 'poetry';
 export const CAR = 'car';
+export const OLD = 'old';
+export const HYSTERIA = 'hysteria';
 
 const oneHour = 1000 * 60 * 60;
 
@@ -80,6 +83,37 @@ export const PLAYS_INFO = {
       }
     ],
     dates: [{ string: '30 сентября, 17:00', date: new Date('2018-09-30 17:00') }]
+  },
+  [HYSTERIA]: {
+    title: '13 новых истерик. Вася Чернявский',
+    link: null,
+    component: null,
+    dates: [
+      { string: '18 ноября, 17:00', date: new Date('2018-11-18 17:00') }
+    ]
+  },
+  [OLD]: {
+    title: 'Вы чьё, старичьё?',
+    link: getLinkByPlayId(OLD),
+    component: Old,
+    faces: [
+      {
+        title: 'Режиссер',
+        userId: ALESYA
+      },
+      {
+        title: 'Расказчик',
+        userId: BORIS
+      },
+      {
+        title: 'Автор',
+        description:
+          'Б. Васильев'
+      }
+    ],
+    dates: [
+      { string: '10 ноября, 17:00', date: new Date('2018-11-10 17:00') }
+    ]
   },
   [CAR]: {
     title: 'Не садись в машину, где двое',
@@ -135,8 +169,8 @@ export const PLAYS_INFO = {
       }
     ],
     dates: [
-      { string: '23 сентября, 17:00', date: new Date('2018-09-23 17:00') },
-      { string: '29 сентября, 17:00', date: new Date('2018-09-29 17:00') }
+      { string: '17 ноября, 17:00', date: new Date('2018-11-17 17:00') },
+      { string: '24 ноября, 17:00', date: new Date('2018-11-24 17:00') }
       ]
   },
   [SILVER]: {
@@ -378,6 +412,7 @@ export const PLAYS_INFO = {
 };
 
 const ACTIVE_PLAYS = [
+  OLD,
   CAR,
   DAMN,
   ZOSCHENKO,
@@ -430,7 +465,7 @@ export const getNextPlays = () => {
             acc.push({
               title: getPlayNameByPlayId(playId),
               description: string,
-              link: getLinkByPlayId(playId),
+              link: PLAYS_INFO[playId].link,
               date
             });
           }

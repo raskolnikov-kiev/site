@@ -156,3 +156,17 @@ export const Car = () => (
     </div>
   </div>
 );
+
+export const Old = () => (
+  <div className="welcome welcome-play">
+    <h1 className="welcome__title">Вы чьё, старичьё?</h1>
+    <div className="welcome__genre">
+      Одноактная <strong>старость</strong>
+    </div>
+    <div className="welcome__text">
+      История <span>одиночества</span> от Дедуни. Когда ты не нужен, появляется скверное чувство <span>тоски</span> и <span>безысходности</span>.
+      Кажется, остаётся лишь одно - <span>умереть</span>. Но судьба любит преподносить <span>сюрпризы</span>.
+      Моноспектакль по одноименному произведению <span>Бориса Васильева</span>, в главной роли - Заслуженый артист Украины <span>Борис Лобода.</span>
+    </div>
+  </div>
+);
