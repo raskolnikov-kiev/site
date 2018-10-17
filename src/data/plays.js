@@ -102,7 +102,7 @@ export const PLAYS_INFO = {
         userId: ALESYA
       },
       {
-        title: 'Расказчик',
+        title: 'Рассказчик',
         userId: BORIS
       },
       {
