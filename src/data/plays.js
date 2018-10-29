@@ -36,6 +36,7 @@ export const POETRY = 'poetry';
 export const CAR = 'car';
 export const OLD = 'old';
 export const HYSTERIA = 'hysteria';
+export const CLASS = 'class';
 
 const oneHour = 1000 * 60 * 60;
 
@@ -90,6 +91,14 @@ export const PLAYS_INFO = {
     component: null,
     dates: [
       { string: '18 ноября, 17:00', date: new Date('2018-11-18 17:00') }
+    ]
+  },
+  [CLASS]: {
+    title: 'Класс нелюбви',
+    link: null,
+    component: null,
+    dates: [
+      { string: '17 ноября, 15:00', date: new Date('2018-11-17 15:00') }
     ]
   },
   [OLD]: {
@@ -168,10 +177,7 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [
-      { string: '17 ноября, 17:00', date: new Date('2018-11-17 17:00') },
-      { string: '24 ноября, 17:00', date: new Date('2018-11-24 17:00') }
-      ]
+    dates: [{ string: '24 ноября, 17:00', date: new Date('2018-11-24 17:00') }]
   },
   [SILVER]: {
     title: 'Серебряный вечер',
