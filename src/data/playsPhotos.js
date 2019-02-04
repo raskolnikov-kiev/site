@@ -9,12 +9,15 @@ import {
   POETRY,
   CAR,
   OLD,
-  getPlayNameByPlayId
+  getPlayNameByPlayId, MASTER
 } from './plays';
 
 import old1 from '@/img/photos/old/1.jpg';
 import old2 from '@/img/photos/old/2.jpg';
 import old3 from '@/img/photos/old/3.jpg';
+
+import master1 from '@/img/photos/master/1.jpg';
+import master2 from '@/img/photos/master/2.jpg';
 
 import car1 from '@/img/photos/car/1.jpg';
 import car2 from '@/img/photos/car/2.jpg';
@@ -71,6 +74,10 @@ import zoschenko6 from '@/img/photos/zoschenko/6.jpg';
 import poetry1 from '@/img/photos/poetry/1.jpg';
 
 export const PLAYS_PHOTOS = {
+  [MASTER]: [
+    { src: master1, alt: getPlayNameByPlayId(MASTER) },
+    { src: master2, alt: getPlayNameByPlayId(MASTER) }
+  ],
   [OLD]: [
     { src: old1, alt: getPlayNameByPlayId(OLD) },
     { src: old2, alt: getPlayNameByPlayId(OLD) },

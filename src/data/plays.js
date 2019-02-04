@@ -22,7 +22,8 @@ import {
   Zoschenko,
   Poetry,
   Car,
-  Old
+  Old,
+  Master
 } from '@/components/PlayDescriptions';
 
 export const DAMN = 'damn';
@@ -37,6 +38,7 @@ export const CAR = 'car';
 export const OLD = 'old';
 export const HYSTERIA = 'hysteria';
 export const CLASS = 'class';
+export const MASTER = 'master';
 
 const oneHour = 1000 * 60 * 60;
 
@@ -177,7 +179,7 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [{ string: '24 ноября, 17:00', date: new Date('2018-11-24 17:00') }]
+    dates: [{ string: '20 января, 17:00', date: new Date('2019-01-20 17:00') }]
   },
   [SILVER]: {
     title: 'Серебряный вечер',
@@ -218,6 +220,70 @@ export const PLAYS_INFO = {
       }
     ],
     dates: [{ string: '10 февраля, 17:00', date: new Date('2018-02-10 17:00') }]
+  },
+  [MASTER]: {
+    title: 'Мужчина и женщина',
+    link: getLinkByPlayId(MASTER),
+    component: Master,
+    faces: [
+      {
+        title: 'Постановка',
+        userId: ALESYA
+      },
+      {
+        title: 'Актриса',
+        userId: ALESYA
+      },
+      {
+        title: 'Актриса',
+        userId: MARINA
+      },
+      {
+        title: 'Актриса',
+        userId: KATYA
+      },
+      {
+        title: 'Актриса',
+        userId: TANYA
+      },
+      {
+        title: 'Актёр',
+        description: 'Максим Капля'
+      },
+      {
+        title: 'Актёр',
+        description: 'Артём Святковский'
+      },
+      {
+        title: 'Актриса',
+        description: 'Тамара Наук'
+      },
+      {
+        title: 'Актриса',
+        description: 'Катерина Бобылева'
+      },
+      {
+        title: 'Актриса',
+        description: 'Анна Кон'
+      },
+      {
+        title: 'Актриса',
+        description: 'Яра Федорченко'
+      },
+      {
+        title: 'Спектакль ведет',
+        userId: OLEGM
+      },
+      {
+        title: 'Драматургия',
+        description: 'М. Булгаков, No Name, А. Савченко'
+      },
+      {
+        title: 'Музыка',
+        description: 'Би-2, Сурганова и оркестр, Сплин, Ночные Снайперы, Nick Cave and the Bad Seeds, Jessie Ware'
+      }
+    ],
+    dates: [{ string: '10 февраля, 17:00', date: new Date('2019-02-10 17:00') }]
   },
   [GARSHIN]: {
     title: 'Мне тебя уже не надо?...',
@@ -418,6 +484,7 @@ export const PLAYS_INFO = {
 };
 
 const ACTIVE_PLAYS = [
+  MASTER,
   OLD,
   CAR,
   DAMN,
@@ -497,7 +564,7 @@ export const getFacesByPlayId = playId =>
 
 export const getPlaysByUserId = userId => {
   return Object.keys(PLAYS_INFO).reduce((acc, playId) => {
-    const roles = PLAYS_INFO[playId].faces
+    const roles = PLAYS_INFO[playId].faces && PLAYS_INFO[playId].faces
       .filter(role => role.userId === userId)
       .map(role => role.title)
       .join(', ');

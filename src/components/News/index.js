@@ -9,7 +9,8 @@ import {
 import { CHEKHOV, CHILD_STUDIO, STUDIO } from '../../data/googleForms';
 
 const News = () => (
-  <div className="block news">
+  <div>
+  {/*<div className="block news">*/}
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -21,53 +22,53 @@ const News = () => (
     {/*Детальнее*/}
     {/*</Link>*/}
     {/*</div>*/}
-    <div className="news__item" style={{ borderBottom: '1px solid #292929' }}>
-      <h3 className="news__item-name">Поэтический спектакль «Класс нелюбви»</h3>
-      <div className="news__item-text">
-        <p>
-          <span className="news__item_important">17 ноября в 15:00</span> состоится показ поэтического спектакля Актёрской студии <span className="news__item_important">«Класс нелюбви»</span>.{' '}
-          Студийцы после двух месяцев обучения читают свои <span className="news__item_important">любимые стихотворения</span> вместе с педагогами.{' '}
-        </p>
-      </div>
-    </div>
-    <div className="news__item" style={{ borderBottom: '1px solid #292929' }}>
-      <h3 className="news__item-name">Актёрская студия для взрослых при «Театре раскольников» в ноябре</h3>
-      <div className="news__item-text">
-        <p>
-          "Театр раскольников" и режиссёр Алеся Савченко приглашают на{' '}
-          <span className="news__item_important">
-            уникальную серию актерских мастер-классов (по методу Михаила
-            Чехова).{' '}
-          </span>
-          3 дня подряд участники будут изучать актёрский метод Михаила Чехова, полностью погружаясь в работу над Архетипами. Участники придут к пониманию феномена Михаила Чехова. В финальный воскресный день группа проработает на сцене отрывок из "Короля Лира" У.Шекспира (в переводе Б.Пастернака).
-          Лекции подойдут для тех, кого интересует актерское мастерство, для тех, кто хочет раскрыть себя и научиться говорить красиво.
-          <ul>
-            <li className="news__item_important"> 2, 3, 4 ноября</li>
-            <li className="news__item_important"> Старт 2 ноября в 19:00</li>
-            <li className="news__item_important">
-              {' '}
-              3 дня, 1000 грн, маленькие группы
-            </li>
-            <li >
-              {' '}
-              тренер - <Link to={getLinkByUserId(ALESYA)}>Алеся Савченко</Link>, режиссер (дипломированный преподаватель
-              метода Михаила Чехова, Член Ассоциации Михаила Чехова)
-            </li>
-            <li>
-              {' '}
-              Больше информации на{' '}
-              <a
-                href="https://www.facebook.com/events/311362479649412/"
-                target="_blank"
-              >
-                facebook
-              </a>
-            </li>
-          </ul>
-          <GoogleFormButton type={CHEKHOV}/>
-        </p>
-      </div>
-    </div>
+    {/*<div className="news__item" style={{ borderBottom: '1px solid #292929' }}>*/}
+      {/*<h3 className="news__item-name">Поэтический спектакль «Класс нелюбви»</h3>*/}
+      {/*<div className="news__item-text">*/}
+        {/*<p>*/}
+          {/*<span className="news__item_important">17 ноября в 15:00</span> состоится показ поэтического спектакля Актёрской студии <span className="news__item_important">«Класс нелюбви»</span>.{' '}*/}
+          {/*Студийцы после двух месяцев обучения читают свои <span className="news__item_important">любимые стихотворения</span> вместе с педагогами.{' '}*/}
+        {/*</p>*/}
+      {/*</div>*/}
+    {/*</div>*/}
+    {/*<div className="news__item" style={{ borderBottom: '1px solid #292929' }}>*/}
+      {/*<h3 className="news__item-name">Актёрская студия для взрослых при «Театре раскольников» в ноябре</h3>*/}
+      {/*<div className="news__item-text">*/}
+        {/*<p>*/}
+          {/*"Театр раскольников" и режиссёр Алеся Савченко приглашают на{' '}*/}
+          {/*<span className="news__item_important">*/}
+            {/*уникальную серию актерских мастер-классов (по методу Михаила*/}
+            {/*Чехова).{' '}*/}
+          {/*</span>*/}
+          {/*3 дня подряд участники будут изучать актёрский метод Михаила Чехова, полностью погружаясь в работу над Архетипами. Участники придут к пониманию феномена Михаила Чехова. В финальный воскресный день группа проработает на сцене отрывок из "Короля Лира" У.Шекспира (в переводе Б.Пастернака).*/}
+          {/*Лекции подойдут для тех, кого интересует актерское мастерство, для тех, кто хочет раскрыть себя и научиться говорить красиво.*/}
+          {/*<ul>*/}
+            {/*<li className="news__item_important"> 2, 3, 4 ноября</li>*/}
+            {/*<li className="news__item_important"> Старт 2 ноября в 19:00</li>*/}
+            {/*<li className="news__item_important">*/}
+              {/*{' '}*/}
+              {/*3 дня, 1000 грн, маленькие группы*/}
+            {/*</li>*/}
+            {/*<li >*/}
+              {/*{' '}*/}
+              {/*тренер - <Link to={getLinkByUserId(ALESYA)}>Алеся Савченко</Link>, режиссер (дипломированный преподаватель*/}
+              {/*метода Михаила Чехова, Член Ассоциации Михаила Чехова)*/}
+            {/*</li>*/}
+            {/*<li>*/}
+              {/*{' '}*/}
+              {/*Больше информации на{' '}*/}
+              {/*<a*/}
+                {/*href="https://www.facebook.com/events/311362479649412/"*/}
+                {/*target="_blank"*/}
+              {/*>*/}
+                {/*facebook*/}
+              {/*</a>*/}
+            {/*</li>*/}
+          {/*</ul>*/}
+          {/*<GoogleFormButton type={CHEKHOV}/>*/}
+        {/*</p>*/}
+      {/*</div>*/}
+    {/*</div>*/}
     {/*<div className="news__item" style={{ borderBottom: '1px solid #292929' }}>*/}
       {/*<h3 className="news__item-name">*/}
         {/*<Link to="/studio">Присоединяйтесь к Актерской Студии в октябре !</Link>*/}
