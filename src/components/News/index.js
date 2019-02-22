@@ -8,11 +8,11 @@ import {
 } from '../../data/faces';
 import { CHEKHOV, CHILD_STUDIO, SPEECH, STUDIO } from '../../data/googleForms';
 import { isExpired } from '../../data/plays';
-import { getSpeechExpireDate } from '../../data/constants';
+import { getChildrenExpireDate } from '../../data/constants';
 
 const News = () => (
   <div className="block news">
-    <SpeechNews expireDate = {getSpeechExpireDate()}/>
+    <Children expireDate = {getChildrenExpireDate()}/>
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -97,6 +97,42 @@ const News = () => (
     {/*</div>*/}
   </div>
 );
+
+const Children = ({expireDate}) => {
+  return (
+    !isExpired(expireDate) && (
+      <div className="news__item" >
+        <h3 className="news__item-name">Детская актёрская студия с 1 марта</h3>
+        <div className="news__item-text">
+            <p>
+              Дорогие дети, а также их родители! <br />Рады сообщить вам, что 1 марта при "Театре раскольников" стартует детская актёрская студия.<br /><br />
+              С помощью <span className="news__item_important">простых игр и упражнений</span> мы:
+            <ul>
+              <li > научимся артикуляционной гимнастике</li>
+              <li > разучим скороговорки</li>
+              <li > разучим стихотворения</li>
+              <li > познакомимся и подружимся со своим телом</li>
+              <li > разовьем память, речь и наблюдательность</li>
+              <li > и, конечно же, будем развивать творческую фантазию и образное мышление.</li>
+            </ul>
+            <span className="news__item_important">В игровом формате</span> мы начнем лучше формулировать свои мысли, <span className="news__item_important">не стесняются выражать свое мнение</span> и становятся открытыми к общению, к новым знаниям, к творчеству и воображению.
+
+            <ul>
+              <li className="news__item_important"> Группы: дошкольники, младшая школа, старшая школа</li>
+              <li> Начало занятий - <span className="news__item_important">1 марта</span>. Пробные бесплатные занятия - <span className="news__item_important">25 и 27 февраля.</span></li>
+            </ul>
+          </p>
+
+
+            <div>
+              <span style={{ fontSize: 20 }}>Телефон для справки: </span>
+              <a href="tel:+380502036136"style={{ fontSize: 20, whiteSpace: 'nowrap' }} > (050) 2036136</a>
+            </div>
+        </div>
+      </div>
+    )
+  );
+};
 
 const SpeechNews = ({expireDate}) => {
   return (

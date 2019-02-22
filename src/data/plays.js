@@ -108,7 +108,7 @@ export const PLAYS_INFO = {
           'Евріпід'
       }
     ],
-    dates: [{ string: '24 февраля, 17:00', date: new Date('2019-02-24 17:00') }]
+    dates: [{ string: '23 февраля, 17:00', date: new Date('2019-02-23 17:00') }]
   },
   [PIAF]: {
     title: 'Едіт Піаф',
