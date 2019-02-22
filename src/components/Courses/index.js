@@ -10,6 +10,7 @@ import Gallery from '../Gallery';
 import { ALESYA, getLinkByUserId } from '@/data/faces';
 import { CHEKHOV_DATE, SPEECH_DATE, POEMS_DATE } from '@/data/constants';
 import { COURSES_PHOTOS } from '@/data/courses';
+import { isExpired } from '../../data/plays';
 
 const getButtonText = isOpen =>
   isOpen ? 'Не хочу знать больше' : 'Хочу знать больше';
@@ -123,9 +124,9 @@ const Speech = ({ isOpen, toggle }) => (
       <div className="morale">
         <h4 className="morale__heading">Теперь, «мораль».</h4>
         <ul>
-          {SPEECH_DATE && (
+          {SPEECH_DATE && !isExpired(SPEECH_DATE.expireDate) && (
             <li className="next-course morale__item">
-              Ближайший старт: {SPEECH_DATE}
+              Ближайший старт: {SPEECH_DATE.string}
             </li>
           )}
           <li className="morale__item">2 дня по 2 часа</li>

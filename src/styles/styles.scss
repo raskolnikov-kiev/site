@@ -8,16 +8,6 @@
 @import 'container';
 @import 'studio';
 
-//h2 {
-//  margin: 10px 0;
-//  font-family: inherit;
-//  font-weight: bold;
-//  color: inherit;
-//  text-rendering: optimizelegibility;
-//  font-size: 31.5px;
-//  line-height: 40px;
-//}
-
 .block {
   background: $bg1;
   padding: 25px 12px;
@@ -233,7 +223,6 @@
     margin-top: -10px;
     text-align: right;
     color: $genre-color;
-    //line-height: 30px;
     padding-bottom: 25px;
     font-weight: normal;
   }

@@ -54,7 +54,7 @@ class Studio extends Component {
             "Театр раскольников" начинает эксперимент и открывает двери для всех
             желающих учиться! Театральный дом "раскольников" с магической
             атмосферой приглашает в студию.{' '}
-            <strong>Присоединяйтесь к труппе в октябре 2018!</strong>
+            {/*<strong>Присоединяйтесь к труппе в октябре 2018!</strong>*/}
           </div>
           <div className="course__description welcome__text">
             <GoogleFormButton type={CHEKHOV}/>

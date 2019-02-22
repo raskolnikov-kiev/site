@@ -9,8 +9,21 @@ import {
   POETRY,
   CAR,
   OLD,
-  getPlayNameByPlayId, MASTER
+  MEANING,
+  MASTER,
+  GODS,
+  PIAF,
+  getPlayNameByPlayId,
 } from './plays';
+
+import gods1 from '@/img/photos/gods/1.jpg';
+import gods2 from '@/img/photos/gods/2.jpg';
+import gods3 from '@/img/photos/gods/3.jpg';
+
+import piaf1 from '@/img/photos/piaf/1.jpg';
+import piaf2 from '@/img/photos/piaf/2.jpg';
+
+import meaning1 from '@/img/photos/meaning/1.jpg';
 
 import old1 from '@/img/photos/old/1.jpg';
 import old2 from '@/img/photos/old/2.jpg';
@@ -18,6 +31,8 @@ import old3 from '@/img/photos/old/3.jpg';
 
 import master1 from '@/img/photos/master/1.jpg';
 import master2 from '@/img/photos/master/2.jpg';
+import master3 from '@/img/photos/master/3.jpg';
+import master4 from '@/img/photos/master/4.jpg';
 
 import car1 from '@/img/photos/car/1.jpg';
 import car2 from '@/img/photos/car/2.jpg';
@@ -74,9 +89,23 @@ import zoschenko6 from '@/img/photos/zoschenko/6.jpg';
 import poetry1 from '@/img/photos/poetry/1.jpg';
 
 export const PLAYS_PHOTOS = {
+  [PIAF]: [
+    { src: piaf1, alt: getPlayNameByPlayId(PIAF) },
+    { src: piaf2, alt: getPlayNameByPlayId(PIAF) }
+  ],
+  [GODS]: [
+    { src: gods1, alt: getPlayNameByPlayId(GODS) },
+    { src: gods2, alt: getPlayNameByPlayId(GODS) },
+    { src: gods3, alt: getPlayNameByPlayId(GODS) }
+  ],
   [MASTER]: [
     { src: master1, alt: getPlayNameByPlayId(MASTER) },
-    { src: master2, alt: getPlayNameByPlayId(MASTER) }
+    { src: master2, alt: getPlayNameByPlayId(MASTER) },
+    { src: master3, alt: getPlayNameByPlayId(MASTER) },
+    { src: master4, alt: getPlayNameByPlayId(MASTER) }
+  ],
+  [MEANING]: [
+    { src: meaning1, alt: getPlayNameByPlayId(MEANING) }
   ],
   [OLD]: [
     { src: old1, alt: getPlayNameByPlayId(OLD) },

@@ -76,6 +76,10 @@ p {
     color: $title-text;
     font-weight: normal;
 
+    &:hover {
+      color: $title-text-hover;
+    }
+
     @include for-tablet-landscape-up {
       font-size: 30px;
     }

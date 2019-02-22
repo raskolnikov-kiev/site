@@ -23,7 +23,10 @@ import {
   Poetry,
   Car,
   Old,
-  Master
+  Master,
+  Meaning,
+  Gods,
+  Piaf
 } from '@/components/PlayDescriptions';
 
 export const DAMN = 'damn';
@@ -39,6 +42,9 @@ export const OLD = 'old';
 export const HYSTERIA = 'hysteria';
 export const CLASS = 'class';
 export const MASTER = 'master';
+export const MEANING = 'meaning';
+export const GODS = 'gods';
+export const PIAF = 'piaf';
 
 const oneHour = 1000 * 60 * 60;
 
@@ -86,6 +92,61 @@ export const PLAYS_INFO = {
       }
     ],
     dates: [{ string: '30 сентября, 17:00', date: new Date('2018-09-30 17:00') }]
+  },
+  [GODS]: {
+    title: 'Ігри богинь',
+    link: getLinkByPlayId(GODS),
+    component: Gods,
+    faces: [
+      {
+        title: 'Режисер',
+        userId: MARINA
+      },
+      {
+        title: 'Драматургія',
+        description:
+          'Евріпід'
+      }
+    ],
+    dates: [{ string: '24 февраля, 17:00', date: new Date('2019-02-24 17:00') }]
+  },
+  [PIAF]: {
+    title: 'Едіт Піаф',
+    link: getLinkByPlayId(PIAF),
+    component: Piaf,
+    faces: [
+      {
+        title: 'Режисер',
+        userId: MARINA
+      },
+      {
+        title: 'Едіт Піаф',
+        userId: MARINA
+      }
+    ],
+    dates: [{ string: '8 марта, 17:00', date: new Date('2019-03-08 17:00') }]
+  },
+  [MEANING]: {
+    title: 'Сутність речей',
+    link: getLinkByPlayId(MEANING),
+    component: Meaning,
+    faces: [
+      // {
+      //   title: 'Режиссер',
+      //   userId: MARINA
+      // },
+      {
+        title: 'Душі предметів',
+        userId: MARINA
+      },
+      {
+        title: 'Спектакль ведет',
+        userId: OLEGM
+      }
+    ],
+    dates: [
+      { string: '16 декабря, 18:00', date: new Date('2018-12-16 18:00') }
+    ]
   },
   [HYSTERIA]: {
     title: '13 новых истерик. Вася Чернявский',
@@ -179,7 +240,7 @@ export const PLAYS_INFO = {
         userId: OLEGM
       }
     ],
-    dates: [{ string: '20 января, 17:00', date: new Date('2019-01-20 17:00') }]
+    dates: [{ string: '20 января, 17:00', date: new Date('2018-01-20 17:00') }]
   },
   [SILVER]: {
     title: 'Серебряный вечер',
@@ -219,7 +280,7 @@ export const PLAYS_INFO = {
         description: 'О. Погудин, А. Вивальди'
       }
     ],
-    dates: [{ string: '10 февраля, 17:00', date: new Date('2018-02-10 17:00') }]
+    dates: [{ string: '8 декабря, 15:00', date: new Date('2018-12-08 15:00') }]
   },
   [MASTER]: {
     title: 'Мужчина и женщина',
@@ -283,7 +344,7 @@ export const PLAYS_INFO = {
         description: 'Би-2, Сурганова и оркестр, Сплин, Ночные Снайперы, Nick Cave and the Bad Seeds, Jessie Ware'
       }
     ],
-    dates: [{ string: '10 февраля, 17:00', date: new Date('2019-02-10 17:00') }]
+    dates: [{ string: '17 февраля, 18:00', date: new Date('2019-02-17 18:00') }]
   },
   [GARSHIN]: {
     title: 'Мне тебя уже не надо?...',
@@ -419,7 +480,7 @@ export const PLAYS_INFO = {
         userId: OLEGB
       }
     ],
-    dates: [{ string: '27 января, 17:00', date: new Date('2018-01-27 17:00') }]
+    dates: [{ string: '3 марта, 17:00', date: new Date('2019-03-03 17:00') }]
   },
   [ZOSCHENKO]: {
     title: 'Зощенко',
@@ -550,7 +611,7 @@ export const getNextPlays = () => {
     .sort((a, b) => a.date - b.date);
 };
 
-const isExpired = date => +date + oneHour - new Date() < 0;
+export const isExpired = date => +date + oneHour - new Date() < 0;
 
 export const getPlayNameByPlayId = playId => PLAYS_INFO[playId].title;
 

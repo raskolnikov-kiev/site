@@ -24,7 +24,7 @@ const Home = () => {
       <Gallery images={images} isHome={true} />
       <WelcomeBlock />
       <Plays plays={plays} title={title} isDates={true} />
-      <News />
+      {/*<News />*/}
       <Faces />
     </div>
   );
