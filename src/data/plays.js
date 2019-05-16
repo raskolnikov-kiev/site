@@ -10,7 +10,8 @@ import {
   getLinkByUserId,
   ALYONA,
   MARINA,
-  POLINA
+  POLINA,
+  ARTEM
 } from './faces';
 import {
   Damn,
@@ -214,6 +215,10 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Мужик',
+        userId: ARTEM
+      },
+      {
+        title: 'Мужик',
         userId: OLEGB
       },
       {
@@ -309,11 +314,11 @@ export const PLAYS_INFO = {
       },
       {
         title: 'Актёр',
-        description: 'Максим Капля'
+        userId: ARTEM
       },
       {
         title: 'Актёр',
-        description: 'Артём Святковский'
+        description: 'Максим Капля'
       },
       {
         title: 'Актриса',

@@ -11,7 +11,8 @@ import {
   BORIS,
   MARINA,
   TANYA,
-  POLINA
+  POLINA,
+  ARTEM
 } from '@/data/faces';
 import { Link } from 'react-router-dom';
 
@@ -59,6 +60,15 @@ const Faces = () => (
           </p>
         </Link>
       </li>
+      <li className="faces__list-item">
+        <Link to={getLinkByUserId(ARTEM)} className="photo">
+          <div className="photo__img photo__img-artem" />
+          <p className="photo__actor-name">
+            {getNameByUserId(ARTEM)} <br />актер
+          </p>
+        </Link>
+      </li>
+
       <li className="faces__list-item">
         <Link to={getLinkByUserId(MARINA)} className="photo">
           <div className="photo__img photo__img-marina" />

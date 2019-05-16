@@ -89,7 +89,7 @@
     "description": "Актриса театра",
     "image": "http://raskolnikov.kiev.ua/assets/social/tanya.jpg"
   },
-  "/face/Polina﻿Mandibura": {
+  "/face/PolinaMandibura": {
     "title": "Полина ﻿Мандыбура | Театр раскольников",
     "description": "Актриса театра",
     "image": "http://raskolnikov.kiev.ua/assets/social/polina.jpg"
@@ -128,5 +128,10 @@
     "title": "Вера Иващенко | Театр раскольников",
     "description": "Костюмер театра",
     "image": "http://raskolnikov.kiev.ua/assets/social/vera.jpg"
+  },
+  "/face/ArtemSviatkovsky": {
+    "title": "Артём Святковский | Театр раскольников",
+    "description": "Актёр",
+    "image": "http://raskolnikov.kiev.ua/assets/social/artem.jpg"
   }
 }

@@ -53,6 +53,10 @@ import alyona7 from '@/img/photos/alyona/7.jpg';
 import alyona8 from '@/img/photos/alyona/8.jpg';
 import alyona9 from '@/img/photos/alyona/9.jpg';
 
+import artem1 from '@/img/photos/artem/1.jpg';
+import artem2 from '@/img/photos/artem/2.jpg';
+import artem3 from '@/img/photos/artem/3.jpg';
+
 import boris1 from '@/img/photos/boris/1.jpg';
 import boris2 from '@/img/photos/boris/2.jpg';
 import boris3 from '@/img/photos/boris/3.jpg';
@@ -117,8 +121,11 @@ export const OLEGB_NAME = 'Олег Бабич';
 export const TANYA = 'TatyanaKazydub';
 export const TANYA_NAME = 'Татьяна Казыдуб';
 
-export const POLINA = 'Polina﻿Mandibura';
+export const POLINA = 'PolinaMandibura';
 export const POLINA_NAME = 'Полина ﻿Мандыбура';
+
+export const ARTEM = 'ArtemSviatkovsky';
+export const ARTEM_NAME = 'Артём Святковский';
 
 const FACES = {
   [POLINA]: {
@@ -251,7 +258,15 @@ const FACES = {
       { src: olegb12, alt: OLEGB_NAME },
       { src: olegb13, alt: OLEGB_NAME }
     ]
-  }
+  },
+    [ARTEM]: {
+      name: ARTEM_NAME,
+        images: [
+        { src: artem1, alt: ARTEM_NAME },
+        { src: artem2, alt: ARTEM_NAME },
+        { src: artem3, alt: ARTEM_NAME }
+      ]
+    }
 };
 
 const getUserIdsString = () => Object.keys(FACES).join('|');
