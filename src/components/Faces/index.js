@@ -32,7 +32,7 @@ const Faces = () => (
         <Link to={getLinkByUserId(OLEGB)} className="photo">
           <div className="photo__img photo__img-oleg" />
           <p className="photo__actor-name">
-            {getNameByUserId(OLEGB)} <br />актёр
+            {getNameByUserId(OLEGB)} <br />режиссёр, актёр
           </p>
         </Link>
       </li>
@@ -40,7 +40,7 @@ const Faces = () => (
         <Link to={getLinkByUserId(ALESYA)} className="photo">
           <div className="photo__img photo__img-alesya" />
           <p className="photo__actor-name">
-            {getNameByUserId(ALESYA)} <br />режиссер, актриса
+            {getNameByUserId(ALESYA)} <br />режиссёр, актриса
           </p>
         </Link>
       </li>
@@ -73,7 +73,7 @@ const Faces = () => (
         <Link to={getLinkByUserId(MARINA)} className="photo">
           <div className="photo__img photo__img-marina" />
           <p className="photo__actor-name">
-            {getNameByUserId(MARINA)} <br />режиссер, актриса
+            {getNameByUserId(MARINA)} <br />режиссёр, актриса
           </p>
         </Link>
       </li>
