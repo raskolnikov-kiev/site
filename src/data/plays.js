@@ -349,7 +349,7 @@ export const PLAYS_INFO = {
         description: 'Би-2, Сурганова и оркестр, Сплин, Ночные Снайперы, Nick Cave and the Bad Seeds, Jessie Ware'
       }
     ],
-    dates: [{ string: '17 февраля, 18:00', date: new Date('2019-02-17 18:00') }]
+    dates: [{ string: '9 июня, 18:00', date: new Date('2019-06-09 18:00') }]
   },
   [GARSHIN]: {
     title: 'Мне тебя уже не надо?...',

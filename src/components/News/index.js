@@ -8,11 +8,11 @@ import {
 } from '../../data/faces';
 import { CHEKHOV, CHILD_STUDIO, SPEECH, STUDIO } from '../../data/googleForms';
 import { isExpired } from '../../data/plays';
-import { getChildrenExpireDate } from '../../data/constants';
+import { getMasterExpireDate } from '../../data/constants';
 
 const News = () => (
   <div className="block news">
-    <Children expireDate = {getChildrenExpireDate()}/>
+    <Master expireDate = {getMasterExpireDate()}/>
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -97,6 +97,38 @@ const News = () => (
     {/*</div>*/}
   </div>
 );
+
+const Master = ({expireDate}) => {
+  return (
+    !isExpired(expireDate) && (
+      <div className="news__item" >
+        <h3 className="news__item-name">Мужчина и женщина 9 июня, в 18:00</h3>
+        <div className="news__item-text">
+          <p>
+            Совместный проект <span className="news__item_important">«Театра раскольников»</span> и театра <span className="news__item_important">«Dark Sofit»</span>!<br />
+            Приглашаем на перформанс, в чём "изюминка"? Постановка будет происходить в помещении театра и на улице недалеко от театра. <br />
+            <br /><span className="news__item_important">Главное, одевайтесь по погоде.</span><br />
+          </p>
+          <p>
+            «Мужчина и женщина» - это перформанс, созданный на основе нескольких произведений, в том числе {' '}
+            <span className="news__item_important">«Мастер и Маргарита»</span> Михаила Булгакова и <span className="news__item_important">«Тень дерева»</span> от No Name.
+          </p>
+          <p>
+            Вас ждёт много интерактива, музыки и безумия. Режиссёр и актёры <span className="news__item_important">"выпотрошат"</span> всех персонажей, дабы найти то, ради чего стоит ставить спектакль.
+            Мы приглашаем вас на <span className="news__item_important">поиски любви...</span>
+          </p>
+          <p>
+
+          </p>
+          <div>
+            <span style={{ fontSize: 20 }}>Действо будет происходить в </span>
+            <p style={{ fontSize: 20, whiteSpace: 'nowrap' }} > <a href="https://goo.gl/maps/2uckX9gBTyAmRdBZ9" target="_blank"> ДК им. Королёва, ул. Николая Василенко, 15</a>,<br/> (Малая сцена, 4 этаж, ком.403, вход со двора).</p>
+          </div>
+        </div>
+      </div>
+    )
+  );
+};
 
 const Children = ({expireDate}) => {
   return (
