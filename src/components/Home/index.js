@@ -7,7 +7,7 @@ import Plays from '../Plays';
 import News from '../News';
 import Faces from '../Faces';
 
-import { getNextPlays } from '@/data/plays';
+import { getNextPlays, getActivePlays } from '@/data/plays';
 
 const Home = () => {
   const images = [
@@ -18,14 +18,16 @@ const Home = () => {
   ];
   const title = 'Ближайшие спектакли';
   const plays = getNextPlays();
+  const activePlays = getActivePlays();
 
   return (
     <div className="page">
       <Gallery images={images} isHome={true} />
       <WelcomeBlock />
       <Plays plays={plays} title={title} isDates={true} />
-      <News />
+      {/*<News />*/}
       <Faces />
+      <Plays plays={activePlays} title="Cпектакли" />
     </div>
   );
 };
