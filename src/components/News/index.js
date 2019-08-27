@@ -8,11 +8,13 @@ import {
 } from '../../data/faces';
 import { CHEKHOV, CHILD_STUDIO, SPEECH, STUDIO } from '../../data/googleForms';
 import { isExpired } from '../../data/plays';
-import { getChildrenExpireDate } from '../../data/constants';
+import { getBalzakExpireDate } from '../../data/constants';
+import balzak from '@/img/balzak.jpg';
+import courses6 from '@/img/photos/courses/6.jpg';
 
 const News = () => (
   <div className="block news">
-    <Children expireDate = {getChildrenExpireDate()}/>
+    <Balzak expireDate = {getBalzakExpireDate()}/>
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -97,6 +99,32 @@ const News = () => (
     {/*</div>*/}
   </div>
 );
+
+const Balzak = ({expireDate}) => {
+  return (
+    !isExpired(expireDate) && (
+      <div>
+        <div className="news__item">
+          <h3 className="news__item-name">«Раскольники» на Бальзак-Фесте</h3>
+          <div className="news__item-text">
+
+            <p>
+              <span className="news__item_important">21 сентября</span> «раскольники» открывают свой 5 театральный сезон перформансом
+              в рамках Бальзак феста!
+            </p>
+            <img src={balzak} alt="Оноре Де Бальзак"/>
+            <p>
+              Историческая реконструкция, костюмы и <span className="news__item_important">ожившие герои из Бальзаковской
+              жизни</span> - всё это ждёт зрителя в <span className="news__item_important">Верховне Житомирской области</span>. Если вы мечтаете познакомиться с Оноре де Бальзаком и его окружением - милости просим на Бальзак фест!
+            </p>
+          </div>
+          <a href="https://balzacfest.com.ua" className="more" target="_blank">
+            На сайт Бальзак-Феста
+          </a>
+        </div>
+      </div>
+    ));
+};
 
 const Children = ({expireDate}) => {
   return (
