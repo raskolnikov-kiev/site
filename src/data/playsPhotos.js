@@ -33,6 +33,23 @@ import master1 from '@/img/photos/master/1.jpg';
 import master2 from '@/img/photos/master/2.jpg';
 import master3 from '@/img/photos/master/3.jpg';
 import master4 from '@/img/photos/master/4.jpg';
+import master5 from '@/img/photos/master/5.jpg';
+import master6 from '@/img/photos/master/6.jpg';
+import master7 from '@/img/photos/master/7.jpg';
+import master8 from '@/img/photos/master/8.jpg';
+import master9 from '@/img/photos/master/9.jpg';
+import master10 from '@/img/photos/master/10.jpg';
+import master11 from '@/img/photos/master/11.jpg';
+import master12 from '@/img/photos/master/12.jpg';
+import master13 from '@/img/photos/master/13.jpg';
+import master14 from '@/img/photos/master/14.jpg';
+import master15 from '@/img/photos/master/15.jpg';
+import master16 from '@/img/photos/master/16.jpg';
+import master17 from '@/img/photos/master/17.jpg';
+import master18 from '@/img/photos/master/18.jpg';
+import master19 from '@/img/photos/master/19.jpg';
+
+
 
 import car1 from '@/img/photos/car/1.jpg';
 import car2 from '@/img/photos/car/2.jpg';
@@ -102,7 +119,22 @@ export const PLAYS_PHOTOS = {
     { src: master1, alt: getPlayNameByPlayId(MASTER) },
     { src: master2, alt: getPlayNameByPlayId(MASTER) },
     { src: master3, alt: getPlayNameByPlayId(MASTER) },
-    { src: master4, alt: getPlayNameByPlayId(MASTER) }
+    { src: master4, alt: getPlayNameByPlayId(MASTER) },
+    { src: master5, alt: getPlayNameByPlayId(MASTER) },
+    { src: master6, alt: getPlayNameByPlayId(MASTER) },
+    { src: master7, alt: getPlayNameByPlayId(MASTER) },
+    { src: master8, alt: getPlayNameByPlayId(MASTER) },
+    { src: master9, alt: getPlayNameByPlayId(MASTER) },
+    { src: master10, alt: getPlayNameByPlayId(MASTER) },
+    { src: master11, alt: getPlayNameByPlayId(MASTER) },
+    { src: master12, alt: getPlayNameByPlayId(MASTER) },
+    { src: master13, alt: getPlayNameByPlayId(MASTER) },
+    { src: master14, alt: getPlayNameByPlayId(MASTER) },
+    { src: master15, alt: getPlayNameByPlayId(MASTER) },
+    { src: master16, alt: getPlayNameByPlayId(MASTER) },
+    { src: master17, alt: getPlayNameByPlayId(MASTER) },
+    { src: master18, alt: getPlayNameByPlayId(MASTER) },
+    { src: master19, alt: getPlayNameByPlayId(MASTER) }
   ],
   [MEANING]: [
     { src: meaning1, alt: getPlayNameByPlayId(MEANING) }

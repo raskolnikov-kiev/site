@@ -8,11 +8,13 @@ import {
 } from '../../data/faces';
 import { CHEKHOV, CHILD_STUDIO, SPEECH, STUDIO } from '../../data/googleForms';
 import { isExpired } from '../../data/plays';
-import { getMasterExpireDate } from '../../data/constants';
+import { getBalzakExpireDate } from '../../data/constants';
+import balzak from '@/img/balzak.jpg';
+import courses6 from '@/img/photos/courses/6.jpg';
 
 const News = () => (
   <div className="block news">
-    <Master expireDate = {getMasterExpireDate()}/>
+    <Balzak expireDate = {getBalzakExpireDate()}/>
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -98,36 +100,30 @@ const News = () => (
   </div>
 );
 
-const Master = ({expireDate}) => {
+const Balzak = ({expireDate}) => {
   return (
     !isExpired(expireDate) && (
-      <div className="news__item" >
-        <h3 className="news__item-name">Мужчина и женщина 9 июня, в 18:00</h3>
-        <div className="news__item-text">
-          <p>
-            Совместный проект <span className="news__item_important">«Театра раскольников»</span> и театра <span className="news__item_important">«Dark Sofit»</span>!<br />
-            Приглашаем на перформанс, в чём "изюминка"? Постановка будет происходить в помещении театра и на улице недалеко от театра. <br />
-            <br /><span className="news__item_important">Главное, одевайтесь по погоде.</span><br />
-          </p>
-          <p>
-            «Мужчина и женщина» - это перформанс, созданный на основе нескольких произведений, в том числе {' '}
-            <span className="news__item_important">«Мастер и Маргарита»</span> Михаила Булгакова и <span className="news__item_important">«Тень дерева»</span> от No Name.
-          </p>
-          <p>
-            Вас ждёт много интерактива, музыки и безумия. Режиссёр и актёры <span className="news__item_important">"выпотрошат"</span> всех персонажей, дабы найти то, ради чего стоит ставить спектакль.
-            Мы приглашаем вас на <span className="news__item_important">поиски любви...</span>
-          </p>
-          <p>
+      <div>
+        <div className="news__item">
+          <h3 className="news__item-name">«Раскольники» на Бальзак-Фесте</h3>
+          <div className="news__item-text">
 
-          </p>
-          <div>
-            <span style={{ fontSize: 20 }}>Действо будет происходить в </span>
-            <p style={{ fontSize: 20, whiteSpace: 'nowrap' }} > <a href="https://goo.gl/maps/2uckX9gBTyAmRdBZ9" target="_blank"> ДК им. Королёва, ул. Николая Василенко, 15</a>,<br/> (Малая сцена, 4 этаж, ком.403, вход со двора).</p>
+            <p>
+              <span className="news__item_important">21 сентября</span> «раскольники» открывают свой 5 театральный сезон перформансом
+              в рамках Бальзак феста!
+            </p>
+            <img src={balzak} alt="Оноре Де Бальзак"/>
+            <p>
+              Историческая реконструкция, костюмы и <span className="news__item_important">ожившие герои из Бальзаковской
+              жизни</span> - всё это ждёт зрителя в <span className="news__item_important">Верховне Житомирской области</span>. Если вы мечтаете познакомиться с Оноре де Бальзаком и его окружением - милости просим на Бальзак фест!
+            </p>
           </div>
+          <a href="https://balzacfest.com.ua" className="more" target="_blank">
+            На сайт Бальзак-Феста
+          </a>
         </div>
       </div>
-    )
-  );
+    ));
 };
 
 const Children = ({expireDate}) => {

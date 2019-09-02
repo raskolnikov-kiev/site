@@ -3,12 +3,18 @@ import katya1 from '@/img/photos/katya/1.jpg';
 import katya2 from '@/img/photos/katya/2.jpg';
 import katya3 from '@/img/photos/katya/3.jpg';
 import katya4 from '@/img/photos/katya/4.jpg';
+import katya5 from '@/img/photos/katya/5.jpg';
+import katya6 from '@/img/photos/katya/6.jpg';
 
 import tanya1 from '@/img/photos/tanya/1.jpg';
 import tanya2 from '@/img/photos/tanya/2.jpg';
 import tanya3 from '@/img/photos/tanya/3.jpg';
 import tanya4 from '@/img/photos/tanya/4.jpg';
 import tanya5 from '@/img/photos/tanya/5.jpg';
+import tanya6 from '@/img/photos/tanya/6.jpg';
+import tanya7 from '@/img/photos/tanya/7.jpg';
+import tanya8 from '@/img/photos/tanya/8.jpg';
+import tanya9 from '@/img/photos/tanya/9.jpg';
 
 import olegm1 from '@/img/photos/olegm/1.jpg';
 import olegm2 from '@/img/photos/olegm/2.jpg';
@@ -56,6 +62,14 @@ import alyona9 from '@/img/photos/alyona/9.jpg';
 import artem1 from '@/img/photos/artem/1.jpg';
 import artem2 from '@/img/photos/artem/2.jpg';
 import artem3 from '@/img/photos/artem/3.jpg';
+import artem4 from '@/img/photos/artem/4.jpg';
+import artem5 from '@/img/photos/artem/5.jpg';
+import artem6 from '@/img/photos/artem/6.jpg';
+import artem7 from '@/img/photos/artem/7.jpg';
+import artem8 from '@/img/photos/artem/8.jpg';
+import artem9 from '@/img/photos/artem/9.jpg';
+import artem10 from '@/img/photos/artem/10.jpg';
+import artem11 from '@/img/photos/artem/11.jpg';
 
 import boris1 from '@/img/photos/boris/1.jpg';
 import boris2 from '@/img/photos/boris/2.jpg';
@@ -148,7 +162,11 @@ const FACES = {
       { src: tanya2, alt: TANYA_NAME },
       { src: tanya3, alt: TANYA_NAME },
       { src: tanya4, alt: TANYA_NAME },
-      { src: tanya5, alt: TANYA_NAME }
+      { src: tanya5, alt: TANYA_NAME },
+      { src: tanya6, alt: TANYA_NAME },
+      { src: tanya7, alt: TANYA_NAME },
+      { src: tanya8, alt: TANYA_NAME },
+      { src: tanya9, alt: TANYA_NAME }
     ]
   },
   [KATYA]: {
@@ -157,7 +175,9 @@ const FACES = {
       { src: katya1, alt: KATYA_NAME },
       { src: katya2, alt: KATYA_NAME },
       { src: katya3, alt: KATYA_NAME },
-      { src: katya4, alt: KATYA_NAME }
+      { src: katya4, alt: KATYA_NAME },
+      { src: katya5, alt: KATYA_NAME },
+      { src: katya6, alt: KATYA_NAME }
     ]
   },
   [OLEGM]: {
@@ -262,9 +282,17 @@ const FACES = {
     [ARTEM]: {
       name: ARTEM_NAME,
         images: [
-        { src: artem1, alt: ARTEM_NAME },
-        { src: artem2, alt: ARTEM_NAME },
-        { src: artem3, alt: ARTEM_NAME }
+          { src: artem1, alt: ARTEM_NAME },
+          { src: artem2, alt: ARTEM_NAME },
+          { src: artem3, alt: ARTEM_NAME },
+          { src: artem4, alt: ARTEM_NAME },
+          { src: artem5, alt: ARTEM_NAME },
+          { src: artem6, alt: ARTEM_NAME },
+          { src: artem7, alt: ARTEM_NAME },
+          { src: artem8, alt: ARTEM_NAME },
+          { src: artem9, alt: ARTEM_NAME },
+          { src: artem10, alt: ARTEM_NAME },
+          { src: artem11, alt: ARTEM_NAME }
       ]
     }
 };
