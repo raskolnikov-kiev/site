@@ -9,19 +9,26 @@ const Header = () => (
 
     <nav className="menu">
       <NavLink
-        to="/studio"
+        to="/platform"
         className="menu__item"
         activeClassName="menu__item_active"
       >
-        Студия
+        Актёрская платформа
       </NavLink>
-      <NavLink
-        to="/courses"
-        className="menu__item"
-        activeClassName="menu__item_active"
-      >
-        Курсы
-      </NavLink>
+      {/*<NavLink*/}
+      {/*  to="/studio"*/}
+      {/*  className="menu__item"*/}
+      {/*  activeClassName="menu__item_active"*/}
+      {/*>*/}
+      {/*  Студия*/}
+      {/*</NavLink>*/}
+      {/*<NavLink*/}
+      {/*  to="/courses"*/}
+      {/*  className="menu__item"*/}
+      {/*  activeClassName="menu__item_active"*/}
+      {/*>*/}
+      {/*  Курсы*/}
+      {/*</NavLink>*/}
       <NavLink
         to="/about"
         className="menu__item menu__item-about"
