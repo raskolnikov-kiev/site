@@ -6,15 +6,15 @@ import {
   ALESYA,
   getLinkByUserId,
 } from '../../data/faces';
-import { CHEKHOV, CHILD_STUDIO, SPEECH, STUDIO } from '../../data/googleForms';
+import { CHEKHOV, CHILD_STUDIO, PLATFORM, SPEECH, STUDIO } from '../../data/googleForms';
 import { isExpired } from '../../data/plays';
-import { getBalzakExpireDate } from '../../data/constants';
+import { getPlatformExpireDate } from '../../data/constants';
 import balzak from '@/img/balzak.jpg';
 import courses6 from '@/img/photos/courses/6.jpg';
 
 const News = () => (
   <div className="block news">
-    <Balzak expireDate = {getBalzakExpireDate()}/>
+    <Platform expireDate = {getPlatformExpireDate()}/>
     {/*<div className="news__item">*/}
     {/*<h3 className="news__item-name">Зощенко</h3>*/}
     {/*<div className="news__item-text">*/}
@@ -100,27 +100,32 @@ const News = () => (
   </div>
 );
 
-const Balzak = ({expireDate}) => {
+const Platform = ({expireDate}) => {
   return (
     !isExpired(expireDate) && (
       <div>
         <div className="news__item">
-          <h3 className="news__item-name">«Раскольники» на Бальзак-Фесте</h3>
+          <h3 className="news__item-name">Воркшоп "Актёрская платформа" Чехов, Мейерхольд, Гротовский</h3>
           <div className="news__item-text">
 
             <p>
-              <span className="news__item_important">21 сентября</span> «раскольники» открывают свой 5 театральный сезон перформансом
-              в рамках Бальзак феста!
+            <b>17 ноября</b> стартует <Link to="/platform">уникальный воркшоп «Актёрская платформа»</Link>!<br />Впервые в Украине!<br />
+
+            Интенсив, длинною 5 дней откроет вам мир <b>биомеханики Всеволода Мейерхольда, архетипов и Психологических жестов Михаила Чехова и особую технику Ежи Гротовского</b>. <br />
+
+              <Link to="/platform">Больше деталей на страничке</Link>
+              <br/><br/>
+            <div className="course__description welcome__text" style={{textAlign: 'center'}}>
+              <GoogleFormButton type={PLATFORM}/>
+            </div>
             </p>
-            <img src={balzak} alt="Оноре Де Бальзак"/>
-            <p>
-              Историческая реконструкция, костюмы и <span className="news__item_important">ожившие герои из Бальзаковской
-              жизни</span> - всё это ждёт зрителя в <span className="news__item_important">Верховне Житомирской области</span>. Если вы мечтаете познакомиться с Оноре де Бальзаком и его окружением - милости просим на Бальзак фест!
-            </p>
+
+
+            {/*<p>*/}
+            {/*  Историческая реконструкция, костюмы и <span className="news__item_important">ожившие герои из Бальзаковской*/}
+            {/*  жизни</span> - всё это ждёт зрителя в <span className="news__item_important">Верховне Житомирской области</span>. Если вы мечтаете познакомиться с Оноре де Бальзаком и его окружением - милости просим на Бальзак фест!*/}
+            {/*</p>*/}
           </div>
-          <a href="https://balzacfest.com.ua" className="more" target="_blank">
-            На сайт Бальзак-Феста
-          </a>
         </div>
       </div>
     ));
